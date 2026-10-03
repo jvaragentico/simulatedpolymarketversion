@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simulated-polymarket-version"
+version = "0.1.0"
+description = "Wallet-free BTC Polymarket paper trading with a $50 virtual bankroll"
+requires-python = ">=3.11"
+dependencies = ["websockets>=15,<17"]
+
+[project.scripts]
+paperbot = "polymarket_bot.paper:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
